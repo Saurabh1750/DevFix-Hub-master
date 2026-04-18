@@ -180,7 +180,7 @@ class DevFixHub {
       });
     }, observerOptions);
 
-    document.querySelectorAll('.hero h1, .hero p, .hero-actions, .section-title, .section-copy, .category-large-card, .post-card, .tool-card, .content-card').forEach(el => {
+    document.querySelectorAll('.hero h1, .hero p, .hero-actions, .section-title, .section-copy, .category-large-card, .post-card, .tool-card, .content-card, .auth-panel').forEach(el => {
       el.classList.add('fade-in');
       observer.observe(el);
     });

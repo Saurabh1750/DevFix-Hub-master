@@ -1,4 +1,4 @@
-# DevFix Hub
+ub # DevFix Hub
 
 Practical frontend fixes for HTML, CSS, and JavaScript. Production-ready solutions for real-world developer problems.
 
@@ -30,6 +30,12 @@ Practical frontend fixes for HTML, CSS, and JavaScript. Production-ready solutio
 1. Edit `data/posts.json` - add new post objects
 2. Use `create-post.html` for guided editing
 3. Site rebuilds automatically
+
+## 🔗 Live Demo
+
+[Vercel: https://dev-fix-hub-master.vercel.app](https://dev-fix-hub-master.vercel.app)
+
+[GitHub: https://github.com/Saurabh1750/DevFix-Hub](https://github.com/Saurabh1750/DevFix-Hub)
 
 ## 🔗 Live Demo
 

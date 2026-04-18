@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - DevFix Hub</title>
-  <meta name="description" content="Privacy Policy for DevFix Hub.">
+  <title>Login - DevFix Hub</title>
+  <meta name="description" content="Log in to DevFix Hub to continue building, saving drafts, and managing your workflow.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -40,59 +40,60 @@
   </nav>
 
   <main>
-    <section class="page-hero">
+    <section class="page-hero auth-hero">
       <div class="container">
-        <div class="hero-surface content-shell">
-          <span class="eyebrow">Policy</span>
-          <h1>Privacy Policy</h1>
-          <p>Clear information about the limited data used to keep DevFix Hub running and improving.</p>
+        <div class="hero-surface auth-shell">
+          <div class="auth-panel auth-copy">
+            <span class="eyebrow">Welcome Back</span>
+            <h1>Log in and keep your frontend fixes moving.</h1>
+            <p>Pick up where you left off, manage drafts, and keep your DevFix workflow in one place.</p>
+
+            <div class="auth-highlights">
+              <div class="info-card">
+                <h3>Faster publishing</h3>
+                <p>Return to your draft flow without rebuilding your setup from scratch.</p>
+              </div>
+              <div class="info-card">
+                <h3>Local account access</h3>
+                <p>Your account and session are stored in this browser so the flow works end to end on the static site.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="auth-panel form-card auth-card">
+            <div>
+              <span class="category-tag">Account Access</span>
+              <h2>Login</h2>
+              <p class="auth-note">Sign in with an account you already created on this device.</p>
+            </div>
+
+            <form class="auth-form" data-auth-form="login">
+              <div class="form-field">
+                <label for="login-email">Email</label>
+                <input id="login-email" class="form-control" name="email" type="email" placeholder="you@devfixhub.com" required>
+              </div>
+
+              <div class="form-field">
+                <label for="login-password">Password</label>
+                <div class="password-field">
+                  <input id="login-password" class="form-control" name="password" type="password" placeholder="Enter your password" required minlength="6">
+                  <button type="button" class="password-toggle" data-password-toggle aria-label="Show password">Show</button>
+                </div>
+              </div>
+
+              <div class="auth-row">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="remember">
+                  <span>Keep me signed in on this device</span>
+                </label>
+                <a href="signup.html" class="inline-link">Need an account?</a>
+              </div>
+
+              <button type="submit" class="cta-button">Log In</button>
+              <p class="auth-status" data-auth-status aria-live="polite"></p>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="page-section">
-      <div class="container">
-        <article class="content-card prose legal-card">
-          <p><strong>Last Updated:</strong> April 18, 2026</p>
-
-          <section>
-            <h2>1. Information We Collect</h2>
-            <p>DevFix Hub collects minimal information to provide and improve the site experience.</p>
-            <ul>
-              <li>Google Analytics usage data such as page views.</li>
-              <li>Cookies used for analytics and theme preference.</li>
-              <li>Optional local account data for login and signup, stored only in your browser on this device.</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2>2. Cookies</h2>
-            <p>This site may use cookies for analytics and interface preferences such as theme selection.</p>
-          </section>
-
-          <section>
-            <h2>3. Third-Party Services</h2>
-            <ul>
-              <li><strong>Google Analytics:</strong> Traffic analysis and site usage insights.</li>
-              <li><strong>Google AdSense:</strong> Planned advertising support.</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2>4. Data Security</h2>
-            <p>Account data for this version is stored locally in your browser on this device. Analytics data is handled through third-party services.</p>
-          </section>
-
-          <section>
-            <h2>5. Your Rights</h2>
-            <p>You can manage cookies through your browser settings and use Google Analytics opt-out tools if preferred.</p>
-          </section>
-
-          <section>
-            <h2>6. Contact</h2>
-            <p>Questions about this policy can be sent through the <a href="contact.html">contact page</a>.</p>
-          </section>
-        </article>
       </div>
     </section>
   </main>

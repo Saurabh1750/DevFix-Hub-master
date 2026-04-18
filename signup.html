@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - DevFix Hub</title>
+  <meta name="description" content="Create your DevFix Hub account and start saving practical frontend fixes and drafts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+<body>
+  <div class="particles-bg"></div>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">DevFix Hub</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button class="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero auth-hero">
+      <div class="container">
+        <div class="hero-surface auth-shell">
+          <div class="auth-panel auth-copy">
+            <span class="eyebrow">Get Started</span>
+            <h1>Create your DevFix Hub account in minutes.</h1>
+            <p>Start organizing drafts, follow practical fixes, and build a cleaner workflow for every frontend problem you solve.</p>
+
+            <div class="auth-benefits">
+              <div class="section-card">
+                <h3>What you get</h3>
+                <ul class="check-list">
+                  <li>Save useful fixes for later review.</li>
+                  <li>Prepare publishing-ready draft content.</li>
+                  <li>Create a working local account on this device.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="auth-panel form-card auth-card">
+            <div>
+              <span class="category-tag">New Account</span>
+              <h2>Sign Up</h2>
+              <p class="auth-note">Your account will be saved in this browser and can be used to sign in again.</p>
+            </div>
+
+            <form class="auth-form" data-auth-form="signup">
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="signup-name">Full name</label>
+                  <input id="signup-name" class="form-control" name="name" type="text" placeholder="Ava Developer" required>
+                </div>
+                <div class="form-field">
+                  <label for="signup-role">Role</label>
+                  <input id="signup-role" class="form-control" name="role" type="text" placeholder="Frontend Engineer">
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="signup-email">Email</label>
+                <input id="signup-email" class="form-control" name="email" type="email" placeholder="you@devfixhub.com" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="signup-password">Password</label>
+                  <div class="password-field">
+                    <input id="signup-password" class="form-control" name="password" type="password" placeholder="Create a password" required minlength="6">
+                    <button type="button" class="password-toggle" data-password-toggle aria-label="Show password">Show</button>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label for="signup-confirm-password">Confirm password</label>
+                  <div class="password-field">
+                    <input id="signup-confirm-password" class="form-control" name="confirmPassword" type="password" placeholder="Repeat your password" required minlength="6">
+                    <button type="button" class="password-toggle" data-password-toggle aria-label="Show password">Show</button>
+                  </div>
+                </div>
+              </div>
+
+              <label class="checkbox-label">
+                <input type="checkbox" name="terms" required>
+                <span>I agree to the <a href="privacy.html" class="inline-link">privacy policy</a> and understand my account is stored locally in this browser.</span>
+              </label>
+
+              <button type="submit" class="cta-button">Create Account</button>
+              <p class="auth-status" data-auth-status aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 DevFix Hub. All rights reserved. <a href="privacy.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/auth.js" defer></script>
+</body>
+</html>
