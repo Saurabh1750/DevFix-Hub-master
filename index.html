@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevFix Hub - Practical Frontend Fixes</title>
+  <meta name="description" content="Real solutions for HTML, CSS, and JavaScript issues. Production-ready fixes for modern frontend work.">
+  <meta name="keywords" content="web development, HTML, CSS, JavaScript, debugging, fixes">
+  <meta property="og:title" content="DevFix Hub - Practical Frontend Fixes">
+  <meta property="og:description" content="Real solutions for HTML, CSS, and JavaScript issues.">
+  <meta property="og:type" content="website">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EYEEED8KPY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EYEEED8KPY');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3117782418980939"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <canvas id="particles-bg"></canvas>
+
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">DevFix Hub</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-surface">
+          <span class="eyebrow">Production-ready frontend fixes</span>
+          <h1 class="hero-title">
+            <span class="hero-title-line">Clean solutions for</span>
+            <span class="hero-title-line">modern <span class="gradient-text">developer workflows</span></span>
+          </h1>
+          <p>Copy-paste fixes for HTML, CSS, and JavaScript problems that show up in real projects, with explanations that stay practical and readable.</p>
+          <div class="hero-actions">
+            <a href="blog.html" class="cta-button">Browse Solutions</a>
+            <a href="tools.html" class="secondary-button">Open Tools</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container page-shell">
+        <h2 class="section-title">Featured Solutions</h2>
+        <p class="section-copy">A focused set of fixes for common frontend issues, from layout bugs to event handling and responsive UI problems.</p>
+        <div class="posts-grid" id="featured-posts"></div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container page-shell">
+        <h2 class="section-title">Browse by Category</h2>
+        <p class="section-copy">Jump straight to the stack area you are working in.</p>
+        <div class="categories-grid">
+          <a href="blog.html?category=html" class="category-card" data-category="html">HTML</a>
+          <a href="blog.html?category=css" class="category-card" data-category="css">CSS</a>
+          <a href="blog.html?category=javascript" class="category-card" data-category="javascript">JavaScript</a>
+          <a href="blog.html?category=debugging" class="category-card" data-category="debugging">Debugging</a>
+          <a href="blog.html?category=deployment" class="category-card" data-category="deployment">Deployment</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 DevFix Hub. All rights reserved. <a href="privacy.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/particles.js" defer></script>
+  <script src="assets/js/scroll-reveal.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/search.js" defer></script>
+</body>
+</html>

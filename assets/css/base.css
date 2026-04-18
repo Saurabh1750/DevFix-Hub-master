@@ -1,0 +1,326 @@
+/* Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+
+  --font-sans: "Inter", "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  --primary: #7c8cff;
+  --primary-strong: #5d6bff;
+  --accent: #34d399;
+  --accent-warm: #f59e0b;
+  --primary-gradient: linear-gradient(135deg, #8b9bff 0%, #6d7cff 42%, #38bdf8 100%);
+  --surface-gradient: linear-gradient(180deg, rgba(17, 24, 39, 0.88), rgba(15, 23, 42, 0.72));
+
+  --bg-primary: #08111f;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #111c32;
+  --surface: rgba(15, 23, 42, 0.72);
+  --surface-strong: rgba(15, 23, 42, 0.92);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #c3d0e4;
+  --text-muted: #8fa1bc;
+
+  --border-color: rgba(148, 163, 184, 0.18);
+  --border-strong: rgba(148, 163, 184, 0.28);
+  --shadow-sm: 0 10px 30px rgba(2, 6, 23, 0.16);
+  --shadow-md: 0 18px 50px rgba(2, 6, 23, 0.22);
+  --shadow-lg: 0 24px 70px rgba(2, 6, 23, 0.34);
+  --shadow-glow: 0 0 30px rgba(124, 140, 255, 0.18);
+
+  --radius-sm: 10px;
+  --radius: 18px;
+  --radius-lg: 28px;
+
+  --transition-fast: 180ms ease;
+  --transition: 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 600ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Compatibility aliases used by existing markup */
+  --primary-color: var(--primary);
+  --primary-dark: var(--primary-strong);
+  --shadow-light: var(--shadow-sm);
+  --shadow: var(--shadow-md);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-primary: #f3f7fd;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e8eef8;
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-strong: rgba(255, 255, 255, 0.94);
+  --text-primary: #0f172a;
+  --text-secondary: #42526b;
+  --text-muted: #61748d;
+  --border-color: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.16);
+  --shadow-sm: 0 10px 28px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 18px 45px rgba(15, 23, 42, 0.1);
+  --shadow-lg: 0 24px 70px rgba(15, 23, 42, 0.14);
+  --shadow-glow: 0 0 26px rgba(93, 107, 255, 0.14);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--font-sans);
+  line-height: 1.75;
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent 34%),
+    radial-gradient(circle at 85% 12%, rgba(124, 140, 255, 0.18), transparent 28%),
+    linear-gradient(180deg, #08111f 0%, #091322 100%);
+  background-color: var(--bg-primary);
+  overflow-x: hidden;
+}
+
+:root[data-theme="light"] body {
+  background:
+    radial-gradient(circle at top, rgba(56, 189, 248, 0.1), transparent 34%),
+    radial-gradient(circle at 85% 12%, rgba(124, 140, 255, 0.12), transparent 28%),
+    linear-gradient(180deg, #f6f9fe 0%, #eef4fb 100%);
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(124, 140, 255, 0.28);
+}
+
+#particles-bg,
+.particles-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.particles-bg {
+  background:
+    radial-gradient(circle at 15% 50%, rgba(124, 140, 255, 0.12) 0%, transparent 34%),
+    radial-gradient(circle at 85% 25%, rgba(52, 211, 153, 0.08) 0%, transparent 28%);
+  animation: ambientDrift 18s ease-in-out infinite alternate;
+}
+
+.container {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+main {
+  padding-bottom: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 1rem;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: clamp(2.6rem, 7vw, 4.8rem);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 750;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2.6vw, 1.7rem);
+  font-weight: 700;
+}
+
+p,
+li,
+label,
+input,
+textarea {
+  color: var(--text-secondary);
+}
+
+p,
+li {
+  margin: 0 0 1rem;
+  font-size: clamp(1rem, 1.4vw, 1.08rem);
+}
+
+ul,
+ol {
+  margin: 0 0 1.25rem;
+  padding-left: 1.3rem;
+}
+
+strong {
+  color: var(--text-primary);
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  background: rgba(8, 17, 31, 0.36);
+  color: var(--text-primary);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  min-height: auto;
+}
+
+:root[data-theme="light"] input,
+:root[data-theme="light"] textarea,
+:root[data-theme="light"] select {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: rgba(124, 140, 255, 0.9);
+  box-shadow: 0 0 0 4px rgba(124, 140, 255, 0.14);
+}
+
+.gradient-text,
+.text-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section-copy {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  will-change: opacity, transform;
+}
+
+.fade-in.visible,
+.reveal-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+@keyframes ambientDrift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.65;
+  }
+  100% {
+    transform: translate3d(0, 12px, 0) scale(1.06);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

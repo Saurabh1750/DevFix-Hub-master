@@ -1,0 +1,40 @@
+.post-content a {
+  color: var(--text-primary);
+  text-underline-offset: 0.18em;
+}
+
+.category-tag {
+  background: rgba(99, 102, 241, 0.16);
+  color: #c7d2fe;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  letter-spacing: 0.08em;
+}
+
+[data-theme="light"] .post-card-shell,
+[data-theme="light"] .sidebar-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(248, 250, 252, 0.92)),
+    rgba(255, 255, 255, 0.9);
+  border-color: rgba(148, 163, 184, 0.22);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .post-lead,
+[data-theme="light"] .post-content p,
+[data-theme="light"] .post-content li,
+[data-theme="light"] .post-note,
+[data-theme="light"] .related-posts a,
+[data-theme="light"] .category-list a,
+[data-theme="light"] .post-content .meta {
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .post-content :not(pre) > code {
+  color: #312e81;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+[data-theme="light"] .post-content pre {
+  border-color: rgba(15, 23, 42, 0.08);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
